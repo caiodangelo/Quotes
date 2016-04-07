@@ -6,11 +6,11 @@
 # Example:
 #
 # set :output, "/path/to/my/cron_log.log"
-set :environment, "development"
+# set :environment, "development"
 
-every 2.minutes do
-   rake "quotes:fetch"
-end
+# every 2.minutes do
+#    rake "quotes:fetch"
+# end
 
 #
 # every 2.hours do

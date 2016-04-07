@@ -3,7 +3,7 @@ require 'flickraw'
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "admin", password: "secret",
+  http_basic_authenticate_with name: "admin", password: "admin",
   except: [:random]
 
   # GET /quotes
@@ -77,7 +77,8 @@ class QuotesController < ApplicationController
     @quote = Quote.order("RANDOM()").first
 
     if @quote && @quote.image_url.blank?      
-      @quote.image_url = get_flickr_image_url(@quote)
+      # @quote.image_url = get_flickr_image_url(@quote)
+      # @quote.image_url = 'http://farm3.staticflickr.com/2862/10835118755_3757dab0a4_h.jpg'
       @quote.save
     end
   end

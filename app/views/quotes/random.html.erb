@@ -55,7 +55,8 @@ mark{
       <% if @quote %>
       <img src= "<%= @quote.image_url %>" width="1024" height="682">
       <div class="container">
-       <h1><%= highlight(@quote.quote, @quote.most_significant_word) %>
+       <!-- <h1><%= highlight(@quote.quote, @quote.most_significant_word) %> -->
+       <h1><%= @quote.quote %>
         <i> <%= @quote.author %> </i></h1>
         <p>
         </p>
